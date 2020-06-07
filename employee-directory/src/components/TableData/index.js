@@ -1,62 +1,16 @@
 import React from 'react';
 
-function TableData() {
+function TableData(props) {
   return (
-    <tbody>
-      <tr>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-      </tr>
-
-      <tr>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-      </tr>
-
-      <tr>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-      </tr>
-
-      <tr>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-      </tr>
-
-      <tr>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-      </tr>
-
-      <tr>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-        <td>Arthur</td>
-      </tr>    
-    </tbody>
+    <tr>
+      <td>{props.id}</td>
+      <td>{props.firstName}</td>
+      <td>{props.lastName}</td>
+      <td>{props.role}</td>
+      <td>{props.department}</td>
+      <td>{props.office}</td>
+      <td>{props.telephone}</td>
+    </tr>
   )
 }
 

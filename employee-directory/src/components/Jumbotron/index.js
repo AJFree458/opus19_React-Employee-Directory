@@ -8,7 +8,7 @@ function Jumbotron() {
           Employee Directory
         </h1>
         <p className="lead text-center">
-          Filter by the headings or use the search to find a specific person.
+          Filter by First name, Last name, or role in the table headings, or use the search to find a specific person.
         </p>
       </div>
     </div>

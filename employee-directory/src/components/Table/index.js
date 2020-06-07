@@ -1,13 +1,14 @@
 import React from "react";
 import TableHeader from "../TableHeader";
-import TableData from "../TableData"
 
-function Table() {
+function Table(props) {
   return (
     <table className="table table-striped table-bordered mt-4">
-        <TableHeader />
-        <TableData />
-      </table>
+      <TableHeader />
+      <tbody>
+        {props.children}
+      </tbody>
+    </table>
   )
 }
 
