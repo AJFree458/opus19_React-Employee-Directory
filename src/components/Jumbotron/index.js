@@ -5,10 +5,10 @@ function Jumbotron() {
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
         <h1 className="display-4 text-center">
-          Employee Directory
+          University Employee Directory
         </h1>
         <p className="lead text-center">
-          Filter by First name, Last name, or role in the table headings, or use the search to find a department.
+          Filter by First Name or Last Name in the table headings, or use the search to find a department.
         </p>
       </div>
     </div>

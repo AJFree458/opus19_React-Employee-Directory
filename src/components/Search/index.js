@@ -8,8 +8,8 @@ function Search(props) {
           <input
             type="text"
             name="searchTerm"
-            // value={this.state.searchTerm}
-            // onChange={this.handleChange}
+            value={props.searchTerm}
+            onChange={props.handleChange}
             className="form-control"
             placeholder="Search"
           />

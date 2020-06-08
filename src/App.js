@@ -11,9 +11,34 @@ class App extends Component {
 
   state = {
     employee,
-    searchTerm: "",
+    search: "",
   };
   
+  handleInputChange = event => {
+    console.log(event.target.value);
+    this.setState({ search: event.target.value });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.departSearch(this.state.search)
+      .then(res => {
+        if (res.data.status === "error") {
+          throw new Error(res.data.message);
+        }
+        this.setState({ results: res.data.message, error: "" });
+      })
+      .catch(err => this.setState({ error: err.message }));
+  };
+
+  departSearch = (depart) => {
+    const employeeTable = this.state.employee;
+    employeeTable.filter(function(employee) {
+      return employeeTable.department.toLowerCase.indexOf(depart.toLowerCase) !== -1;
+    })
+    console.log(employeeTable);
+    return employeeTable;
+  }
   
     // Sort columns
   clickSorter = (category) => {
@@ -30,10 +55,14 @@ class App extends Component {
     return (
       <div className={"container"}>
         <Jumbotron />
-        <Search />
+        <Search 
+          handleInputChange={this.handleInputChange}
+          search={this.state.search}
+        />
           <Table>
             <thead className="thead-dark">
-              <th>ID</th>
+              <th  onClick={() => this.clickSorter("id")}>
+                    <button className="tableButton">ID</button></th>
               <th  onClick={() => this.clickSorter("firstName")}>
                     <button className="tableButton">First Name</button></th>
               <th onClick={() => this.clickSorter("lastName")}>
