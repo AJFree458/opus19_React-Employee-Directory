@@ -26,11 +26,7 @@ This is a React.js application that allows the user to view a table of employees
 
 ## Installation
 
-To run on a local system, clone the repository into the directory of choice, then run:
-```
-node server.js
-```
-This will start up the application.
+To run on a local system, clone the repository into the directory of choice, then run see readme2 for directions.
 
 ## Repository
 
